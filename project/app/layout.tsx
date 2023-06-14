@@ -1,6 +1,7 @@
 import './globals.css'
 import React from "react";
 import {Navbar} from "@/components/Navbar";
+import {Footer} from "@/components/Footer";
 
 export const metadata = {
     title: 'Car Showcase',
@@ -15,6 +16,7 @@ export default function RootLayout({children}: {
             <body className="relative">
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     )
