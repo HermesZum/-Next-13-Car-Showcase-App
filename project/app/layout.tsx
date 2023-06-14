@@ -1,5 +1,6 @@
 import './globals.css'
 import React from "react";
+import {Navbar} from "@/components/Navbar";
 
 export const metadata = {
     title: 'Car Showcase',
@@ -12,6 +13,7 @@ export default function RootLayout({children}: {
     return (
         <html lang="en">
             <body className="relative">
+                <Navbar />
                 {children}
             </body>
         </html>
