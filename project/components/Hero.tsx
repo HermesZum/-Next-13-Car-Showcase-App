@@ -2,7 +2,6 @@
 import Image from "next/image";
 import {CustomButton} from "@/components/CustomButton";
 
-
 export const Hero = () => {
 
     const handleScroll = () => {
