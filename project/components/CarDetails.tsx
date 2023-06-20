@@ -1,4 +1,4 @@
-"use client";
+"use strict";
 import {CarProps} from "@/components/CardCar";
 import {Dialog, Transition} from "@headlessui/react";
 import {Fragment} from "react";

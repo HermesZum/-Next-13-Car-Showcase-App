@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import {Combobox, Transition} from "@headlessui/react";
 import {useState, Fragment} from "react";
@@ -9,7 +8,7 @@ interface SearchManufacturerProps {
     setManufacturer: (manufacturer: string) => void
 }
 
-export const SearchManufacturer = ({manufacturer}: SearchManufacturerProps) => {
+export const SearchManufacturer = ({manufacturer, setManufacturer}: SearchManufacturerProps) => {
 
     const [query, setQuery] = useState("");
 
@@ -26,7 +25,7 @@ export const SearchManufacturer = ({manufacturer}: SearchManufacturerProps) => {
     return (
         <>
             <div className="search-manufacturer">
-                <Combobox>
+                <Combobox value={manufacturer} onChange={setManufacturer}>
                     <div className="relative w-full">
                         <Combobox.Button className="absolute top-[14px]">
                             <Image
@@ -40,8 +39,8 @@ export const SearchManufacturer = ({manufacturer}: SearchManufacturerProps) => {
                         </Combobox.Button>
                         <Combobox.Input
                             className="search-manufacturer__input"
-                            placeholder="Volkswagen"
-                            displayValue={(manufacturer: string) => manufacturer}
+                            placeholder="Volkswagen..."
+                            displayValue={(item: string) => item}
                             onChange={(e) => setQuery(e.target.value)}
                         />
                         <Transition
