@@ -1,5 +1,4 @@
 "use client";
-
 import {SearchManufacturer} from "@/components/SearchManufacturer";
 import {FormEvent, useState} from "react";
 import Image from "next/image";
@@ -20,6 +19,7 @@ export const SearchBar = () => {
     const [model, setModel] = useState("");
 
     const router = useRouter();
+
     const handleSearch = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
