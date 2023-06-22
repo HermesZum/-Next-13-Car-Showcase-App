@@ -3,6 +3,7 @@ import {SearchBar} from "@/components/SearchBar";
 import {CustomFilter} from "@/components/CustomFilter";
 import {CardCar} from "@/components/CardCar";
 import {fetchCars, FilterProps} from "@/utils";
+import {fuels, yearsOfProduction} from "@/constants";
 
 export interface HomeProps {
     searchParams: FilterProps;
@@ -30,8 +31,8 @@ export default async function Home({ searchParams }) {
                 <div className="home__filters">
                     <SearchBar/>
                     <div className="home__filter-container">
-                        <CustomFilter title="fuel"/>
-                        <CustomFilter title="year"/>
+                        <CustomFilter title="fuel" options={fuels}/>
+                        <CustomFilter title="year" options={yearsOfProduction}/>
                     </div>
                 </div>
                 {!isDataEmpty
