@@ -52,7 +52,7 @@ export const SearchBar = () => {
 
     return (
         <>
-            <form action="searchbar" className="searchbar" onSubmit={handleSearch}>
+            <form className="searchbar" onSubmit={handleSearch}>
                 <div className="searchbar__item">
                     <SearchManufacturer
                         manufacturer={manufacturer}
